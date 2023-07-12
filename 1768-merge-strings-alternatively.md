@@ -20,8 +20,8 @@ class Solution:
 
 Runtime: 
 
-- O(m+n) where m and n are length of `word1` and `word2` respectively. 
+- `O(m+n)` where m and n are length of `word1` and `word2` respectively. 
 
 Space complexity: 
 
-- O(1): Without considering the space consumed by the input strings (`word1` and `word2`) and the output string (`result`), we do not use more than constant space.
+- `O(1)`: Without considering the space consumed by the input strings (`word1` and `word2`) and the output string (`result`), we do not use more than constant space.
