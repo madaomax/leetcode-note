@@ -2,7 +2,13 @@
 
 Problem description is [here](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/).
 
+Tag: Stack
+
 #### Approach 1: Naive with minor improvements
+
+Fact: To truncate a division towards zero, in Python 3, just wrap float division with `int()`. For example, `int(3 / 2)`.
+
+Idea: find and start evaluate from the innermost expression. 
 
 ```Python
 class Solution:
@@ -30,3 +36,25 @@ class Solution:
             return int(op1 / op2)
 ```
 
+#### Approach 2: stack
+
+It iterates through the tokens of the expression, performing the corresponding arithmetic operations when encountering operators. The solution pops operands from the stack, applies the operations, and pushes the results back to the stack. If a token is an operand, it is directly added to the stack. Finally, the one remaining value on the stack is retrieved as the evaluated result of the RPN expression. 
+
+```Python
+class Solution:
+    def evalRPN(self, tokens: List[str]) -> int:
+        stack = []
+        op = ['+', '-', '*', '/']
+        for t in tokens:
+            if t in op:
+                x, y = int(stack.pop()), int(stack.pop())
+                stack.append(y + x if t == '+' else y - x if t == '-' \
+                                else x * y if t == '*' else int(y / x))       
+            else:
+                stack.append(t)
+        return int(stack[0])
+```
+
+Time complexity: `O(n)`, where n is length of `tokens`. 
+
+Space complexity: `O(1)`
