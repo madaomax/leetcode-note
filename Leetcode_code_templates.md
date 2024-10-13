@@ -158,10 +158,8 @@ def fn(root):
     ans = 0
     
     while queue:
-        current_length = len(queue)
         # do logic for current level
-        
-        for _ in range(current_length):
+        for _ in range(len(queue)):
             node = queue.popleft()
             # do logic
             if node.left:
