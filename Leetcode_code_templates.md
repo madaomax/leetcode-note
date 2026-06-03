@@ -121,7 +121,8 @@ def fn(arr):
         # for monotonic decreasing, just flip the > to <
         while stack and stack[-1] > num:
             # do logic
-            stack.pop()
+            prev = stack.pop()
+            answer[prev] = distant_or_result
         stack.append(num)
     return ans
 ```
@@ -348,18 +349,18 @@ def backtrack(curr, OTHER_ARGUMENTS...):
 
 ### Here's the guide for problem constraints:
 
-| N           | Complexity | Possible Algorithms & Techniques                             |
-| ----------- | ---------- | ------------------------------------------------------------ |
+| N           | Complexity | Possible Algorithms & Techniques                                                             |
+| ----------- | ---------- | -------------------------------------------------------------------------------------------- |
 | 1018        | O(log N)   | Binary & Ternary Search / Matrix Power / Cycle Tricks / Big Simulation Steps / Values ReRank |
-| 100,000,000 | O(N)       | A Linear Solution - May be a greedy/adhock algorithm         |
-| 40,000,000  | O(N log N) | linear # calls to Binary & Ternary Search / Pre-processing & Querying / D & C |
-| 10,000      | O(N2)      | adhock / DP / Greedy / D & C / B & B                         |
-| 500         | O(N3)      | adhock / DP / Greedy / ..                                    |
-| 90          | O(N4)      | adhock / DP / Greedy / ...                                   |
-| 30-50       | O(N5)      | Search with pruning - branch and bound                       |
-| 40          | O(2N/2)    | Meet in Middle                                               |
-| 20          | O(2N)      | Backtracking / Generating 2N Subsets                         |
-| 11          | O(N!)      | Factorial / Permutations / Combination Algorithm             |
+| 100,000,000 | O(N)       | A Linear Solution - May be a greedy/adhock algorithm                                         |
+| 40,000,000  | O(N log N) | linear # calls to Binary & Ternary Search / Pre-processing & Querying / D & C                |
+| 10,000      | O(N2)      | adhock / DP / Greedy / D & C / B & B                                                         |
+| 500         | O(N3)      | adhock / DP / Greedy / ..                                                                    |
+| 90          | O(N4)      | adhock / DP / Greedy / ...                                                                   |
+| 30-50       | O(N5)      | Search with pruning - branch and bound                                                       |
+| 40          | O(2N/2)    | Meet in Middle                                                                               |
+| 20          | O(2N)      | Backtracking / Generating 2N Subsets                                                         |
+| 11          | O(N!)      | Factorial / Permutations / Combination Algorithm                                             |
 
 ** The above table is an excerpt from the ACM ICPC World Finalist 2011. The original blog post can be found [here](https://sites.google.com/site/mostafasibrahim/programming-competitions/thinking-techniques?authuser=0)
 
