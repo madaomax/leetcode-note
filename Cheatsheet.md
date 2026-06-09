@@ -1,5 +1,3 @@
-# Cheatsheet
-
 
 
 BFS guarantees shortest distance in unweighted graphs/

@@ -1,2 +1,6 @@
 .obsidian/
 
+
+# Google service account key
+sheets-sa.json
+*-sa.json
