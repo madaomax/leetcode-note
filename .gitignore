@@ -4,3 +4,6 @@
 # Google service account key
 sheets-sa.json
 *-sa.json
+
+# Local sheet-automation scripts (not part of the notes repo)
+scripts/
